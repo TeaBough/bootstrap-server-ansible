@@ -1,0 +1,2 @@
+[rolename]
+test ansible_connection=ssh ansible_ssh_user=root ansible_ssh_host=0.0.0.0

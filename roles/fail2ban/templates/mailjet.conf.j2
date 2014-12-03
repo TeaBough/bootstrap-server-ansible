@@ -1,0 +1,19 @@
+[Definition]
+
+actionstart =
+actionstop =
+actioncheck =
+actionunban =
+
+actionban = WHOIS=`/usr/bin/whois <ip>`
+            EMAIL_SUBJECT="[Fail2Ban] <name>: banned <ip> from `uname -n`"
+	    EMAIL_CONTENT=`printf "The IP <ip> has just been banned by Fail2Ban after <failures> attempts against <name>.\n\n Here are more information about <ip>:\n$WHOIS\nRegards,\nFail2Ban"`
+            curl -X POST --user <user>  -F from=<from> -F to=<to> -F subject="$EMAIL_SUBJECT" -F text="$EMAIL_CONTENT" <url>
+
+
+[Init]
+url="{{ mail_fail2ban_url }}"
+from="{{ mail_fail2ban_from }}"
+to="{{ mail_fail2ban_to }}"
+user="{{ mailjet.api_key }}:{{ mailjet.secret_key }}"
+

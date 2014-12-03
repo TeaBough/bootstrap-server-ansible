@@ -1,0 +1,6 @@
+- hosts: rolename
+  remote_user: root
+  roles:
+     - role: base
+     - role: fail2ban
+

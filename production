@@ -1,0 +1,2 @@
+[rolename]
+production ansible_ssh_host=0.0.0.0 ansible_connection=ssh ansible_ssh_user=root

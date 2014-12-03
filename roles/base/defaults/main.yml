@@ -1,0 +1,19 @@
+COMMON_LOG_DIR: "/var/www/log"
+
+common_debian_pkgs:
+  - ntp
+  - ack-grep
+  - lynx-cur
+  - logrotate
+  - mosh
+  - rsyslog
+  - screen
+  - tree
+  - git
+  - unzip
+  - python2.7
+  - python-pip
+  - python2.7-dev
+  # Not installed by default on vagrant ubuntu
+  # boxes
+  - curl
