@@ -1,6 +1,5 @@
-COMMON_LOG_DIR: "/var/www/log"
-
 common_debian_pkgs:
+  - git
   - ntp
   - ack-grep
   - lynx-cur
