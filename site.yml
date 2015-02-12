@@ -1,6 +1,5 @@
-- hosts: rolename
-  remote_user: root
+- hosts: web_app_server
+  remote_user: bob
   roles:
      - role: base
-     - role: fail2ban
 

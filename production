@@ -1,2 +1,2 @@
-[rolename]
-production ansible_ssh_host=0.0.0.0 ansible_connection=ssh ansible_ssh_user=root
+[web_app_server]
+server1 ansible_connection=ssh ansible_ssh_host=0.0.0.0 ansible_ssh_port=22  ansible_ssh_user=bob
