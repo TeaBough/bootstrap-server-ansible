@@ -21,12 +21,12 @@
 ignoreip = {{ fail2ban_whitelist_all }}
 
 # "bantime" is the number of seconds that a host is banned.
-bantime  = 600
+bantime  = {{ fail2ban_bantime }}
 
 # A host is banned if it has generated "maxretry" during the last "findtime"
 # seconds.
-findtime = 600
-maxretry = 3
+findtime = {{ fail2ban_findtime }}
+maxretry = {{ fail2ban_maxretry }}
 
 # "backend" specifies the backend used to get files modification.
 # Available options are "pyinotify", "gamin", "polling" and "auto".
@@ -482,16 +482,4 @@ bantime  = 604800  ; 1 week
 findtime = 86400   ; 1 day
 maxretry = 5
 
-
-[http-get-dos]
-enabled = true
-port = http,https
-filter = http-get-dos
-logpath = /var/log/nginx/access.log
-ignoreip = {{ fail2ban_whitelist_http }} {{ fail2ban_whitelist_all }}
-maxretry = {{ fail2ban_maxretry }}
-findtime = {{ fail2ban_findtime }}
-bantime = {{ fail2ban_bantime }}
-action = iptables-multiport[name=HTTPHTTPS, port="http,https"]
-	mailjet[name=mailjet]
 

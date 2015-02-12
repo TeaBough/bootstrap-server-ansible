@@ -1,17 +1,6 @@
-- name: include vars
-  include_vars: "fail2ban.yml"
-
 - name: Install fail2ban
-  action: apt pkg=fail2ban state=installed
+  apt: name=fail2ban state=present
 
-- name: copy http-get-dos file
-  copy: src=http-get-dos.conf dest=/etc/fail2ban/filter.d
-  notify: restart fail2ban
-
-- name: template mailjet
-  template: src=mailjet.conf.j2 dest=/etc/fail2ban/action.d/mailjet.conf
-  notify: restart fail2ban
-
-- name: copy jail.conf
+- name: Copy jail.conf
   template: src=jail.conf.j2 dest=/etc/fail2ban/jail.conf
   notify: restart fail2ban
