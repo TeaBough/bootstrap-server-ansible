@@ -8,7 +8,7 @@
   notify:
     - restart ssh
 
-- name: change SSHD port
+- name: Change SSHD port
   lineinfile: dest=/etc/ssh/sshd_config regexp="^Port 22" line="Port{{ ssh_port }}" state=present
   notify:
     - restart ssh
