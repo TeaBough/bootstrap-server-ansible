@@ -8,17 +8,6 @@
   apt: upgrade=safe
 
 
-
-- name: add authorized_keys
-  authorized_key:  user=root
-                    key="{{ lookup('file', 'public_keys/ssh_keys') }}"
-
-
-
-
-- hostname: name={{ item.name }}
-  with_items: hostname
-
 - name: Install role-independent useful system packages
   apt: >
     pkg={{','.join(common_debian_pkgs)}} install_recommends=yes
