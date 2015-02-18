@@ -1,3 +1,6 @@
+- name: Install ufw
+  apt: name=ufw state=present
+
 - name : Enable UFW and close all ports
   ufw: state=enabled policy=deny
 
