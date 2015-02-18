@@ -1,4 +1,4 @@
 dependencies:
   - {role : users}
   - {role : ssh}
-  - {role : firewall}
+  - {role : ufw}
