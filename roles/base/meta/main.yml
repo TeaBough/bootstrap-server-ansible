@@ -2,3 +2,4 @@ dependencies:
   - {role : users}
   - {role : ssh}
   - {role : ufw}
+  - {role : fail2ban}
