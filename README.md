@@ -1,6 +1,6 @@
 # Ansible security bootstrap
 
-A Full tutorial article can be found at: [Sécuriser son serveur avec Ansible](http://blog.octo.com/securiser-son-serveur-avec-ansible/)
+A full tutorial article can be found at: [Sécuriser son serveur avec Ansible](http://blog.octo.com/securiser-son-serveur-avec-ansible/)
 
 ## Setup
 
