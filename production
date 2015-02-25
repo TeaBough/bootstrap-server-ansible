@@ -1,2 +1,2 @@
 [web_app_server]
-bob_server ansible_connection=ssh ansible_ssh_host=192.168.122.13 ansible_ssh_port=22  ansible_ssh_user=bob
+bob_server ansible_connection=ssh ansible_ssh_host=SERVEUR_IP ansible_ssh_port=22  ansible_ssh_user=bob
