@@ -2,3 +2,4 @@ fail2ban_maxretry: 3
 fail2ban_bantime: 86400 # 1 day
 # time window (in seconds) where the maxretry times should occur
 fail2ban_findtime: 3600 # 1 hour
+fail2ban_whitelist_all: '127.0.0.1'
