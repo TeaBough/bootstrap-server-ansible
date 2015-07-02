@@ -12,3 +12,8 @@
   lineinfile: dest=/etc/ssh/sshd_config regexp="^Port 22" line="Port {{ ssh_port }}" state=present
   notify:
     - restart ssh
+
+- name: Allow only deploy user to login
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^AllowUsers" line="AllowUsers bob" state=present
+  notify:
+    - restart ssh
