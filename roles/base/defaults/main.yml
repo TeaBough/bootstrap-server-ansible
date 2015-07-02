@@ -1,5 +1,4 @@
 common_debian_pkgs:
-  - git
   - ntp
   - ack-grep
   - lynx-cur
@@ -8,7 +7,6 @@ common_debian_pkgs:
   - rsyslog
   - screen
   - tree
-  - git
   - unzip
   - python2.7
   - python-pip
